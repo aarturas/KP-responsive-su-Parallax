@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive su Kevin Powel html 5</title>
+  </head>
+  <body>
+    <!--  1. Pirma: HEADER -->
+    <!-- --------------------------------------------------------- -->
+    <!--      HEADER dalis su LOGO ir trimis menu nuorodomis       -->
+    <!-- --------------------------------------------------------- -->
+
+    <header>
+      <!-- 2. Idedame LOGO -->
+      <img src="img/logoKalnai.png" alt="kalnu logo" class="logo" />
+      <!-- 3. NAV su UL ir LI nesurykiuotu sarasu -->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  4. Antra dalis su SECTION : HOME HERO H - 1 su SPAN tagu  -->
+    <!-- ---------------------------------------------------------- -->
+
+    <section class="home-hero parallax--bg">
+      <div class="container">
+        <h1 class="title parallax--box">
+          Pirma ir antra dalys kartu.<span>
+            Pirma dalis yra NAV, antra dalis - užrašas ir mygtukas</span
+          >
+        </h1>
+        <!-- BUTTON -->
+        <a href="#" class="button button-accent">See our work</a>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------- -->
+    <!--  5. Trecia dalis su didele nuotrauka ir teksto langeliu   -->
+    <!-- --------------------------------------------------------- -->
+
+    <div class="container">
+      <section class="home-about">
+        <div class="home-about-textbox parallax--box">
+          <h1>Trecia dalis</h1>
+          <p>
+            Su Kevino pagalba studijuojame HTML5. Pirma dalis bus NAV su menu
+            nuorodom. Truputį žemiau bus antra dalis su užrašu ir mažesnėmis
+            teksto raidėmis, SPAN pagalba.
+          </p>
+          <p>
+            <strong>Trečia dalis, ši, kurioje rašome,</strong> bus su didele
+            nuotrauka ir žaliai įrėmintu juodu langeliu ant nuotraukos, su
+            baltomis raidėmis. Trečia dalis judės PARALLAX'o pagalba.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- --------------------------------------------------------- -->
+    <!--  6. Ketvirta: vadinsis PORTFOLIO ( some of our work! )    -->
+    <!-- FIGURE bus atvaizduojama kaip langas, kur bus tekstas ir img -->
+    <!-- --------------------------------------------------------- -->
+
+    <section class="portfolio">
+      <h1>Ketvirta dalis: Nuotraukų GRID išdėstymas</h1>
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+      <!-- portfolio item: 01 -->
+      <figure class="port-item">
+        <img src="img/opel.jpg" alt="opelis" />
+        <figcaption class="port-desc">
+          <p>Projekto title 1</p>
+          <a href="" class="button button-accent button-small"
+            >See project details</a
+          >
+        </figcaption>
+      </figure>
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+      <!-- portfolio item: 02 -->
+      <figure class="port-item">
+        <img src="img/woman.jpg" alt="mergina su kava" />
+        <figcaption class="port-desc">
+          <p>Projekto title 2</p>
+          <a href="" class="button button-accent button-small"
+            >See project details</a
+          >
+        </figcaption>
+      </figure>
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+      <!-- portfolio item: 03 -->
+      <figure class="port-item">
+        <img src="img/meskas.jpg" alt="pokemonas" />
+        <figcaption class="port-desc">
+          <p>Projekto title 3</p>
+          <a href="" class="button button-accent button-small"
+            >See project details</a
+          >
+        </figcaption>
+      </figure>
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+      <!-- portfolio item: 04 -->
+      <figure class="port-item">
+        <img src="img/earlyMorning.jpg" alt="abstrakcija" />
+        <figcaption class="port-desc">
+          <p>Projekto title 4</p>
+          <a href="" class="button button-accent button-small"
+            >See project details</a
+          >
+        </figcaption>
+      </figure>
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+      <!-- portfolio item: 05 -->
+      <figure class="port-item">
+        <img src="img/foto 8.jpg" alt="abstrakcija" />
+        <figcaption class="port-desc">
+          <p>Projekto title 5</p>
+          <a href="" class="button button-accent button-small"
+            >See project details</a
+          >
+        </figcaption>
+      </figure>
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+      <!-- portfolio item: 06 -->
+      <figure class="port-item">
+        <img src="img/rainStreet.jpg" alt="abstrakcija" />
+        <figcaption class="port-desc">
+          <p>Projekto title 6</p>
+          <a href="" class="button button-accent button-small"
+            >See project details</a
+          >
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- --------------------------------------------------------- -->
+    <!--  5. Penkta dalis  /  Paprasta, zaliame fone su mygtuku    -->
+    <!-- --------------------------------------------------------- -->
+
+    <section class="cta">
+      <div class="container">
+        <h1 class="title title-cta">
+          Paprasta žalia sekcija
+          <span>Penkta dalis: Šiaip jau yra ketvirta dalis</span>
+        </h1>
+        <a href="#" class="button button-dark">Žiūrėti</a>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  5. Sesta dalis bus FOOTER / Tekstas su trimis stulpeliais -->
+    <!-- ---------------------------------------------------------- -->
+
+    <footer>
+      <div class="container">
+        <!-- Tris stulpelius idesime -->
+        <div class="col-3">
+          <p>
+            FOOTER'is, šešta, paskutinė dalis su GRID išdėstymu. Į vidų
+            sudėliosime tris DIV klases / COL-1 /, UL klasė su paryškinimu /
+            STRONG / pagalba, pirma eilute ir likusieji miestų pavadinimai su /
+            LI /.
+          </p>
+        </div>
+
+        <!-- ****************************************************** -->
+
+        <div class="col-1">
+          <ul class="unstyled-list">
+            <li><strong> Pirmas penketukas</strong></li>
+            <li>Vilnius</li>
+            <li>Kaunas</li>
+            <li>Klaipėda</li>
+            <li>Šiauliai</li>
+            <li>Panevėžys</li>
+          </ul>
+        </div>
+
+        <!-- ****************************************************** -->
+
+        <div class="col-1">
+          <ul class="unstyled-list">
+            <li><strong>Antras penketukas</strong></li>
+            <li>Alytus</li>
+            <li>Marijampolė</li>
+            <li>Mažeikiai</li>
+            <li>Jonava</li>
+            <li>Utena</li>
+          </ul>
+        </div>
+
+        <!-- ****************************************************** -->
+
+        <div class="col-1">
+          <ul class="unstyled-list">
+            <li><strong>Trecias penketukas</strong></li>
+            <li>Kėdainiai</li>
+            <li>Tauragė</li>
+            <li>Telšiai</li>
+            <li>Ukmergė</li>
+            <li>Visaginas</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ****************************************************** -->
+    </footer>
+    <!-- ****************************************************** -->
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/parallax.js"></script>
+  </body>
+</html>
