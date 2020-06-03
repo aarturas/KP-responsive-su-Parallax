@@ -238,7 +238,7 @@ nav {
 /*  8. tarpine     HOME  -  HERO    ( juosta su uzrasu viduje )    */
 /* =============================================================== */
 .home-hero {
-  background: url("../img/lapas.jpg");
+  background: url(../dist/img/lapas.jpg);
   background-size: cover;
   background-position: center;
   padding: 10em 0;
