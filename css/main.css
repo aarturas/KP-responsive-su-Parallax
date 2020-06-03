@@ -398,7 +398,7 @@ nav a {
   h1 {
     font-size: 2.5rem; }
   .home-about {
-    background-image: url("../img/juokas.jpg");
+    background: url("../img/juokas.jpg");
     padding: 1em;
     background-repeat: no-repeat;
     padding-bottom: 10em; }
