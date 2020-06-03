@@ -264,7 +264,8 @@ p {
 
 .button-accent {
   color: #00ff6c;
-  border-color: #00ff6c; }
+  border-color: #00ff6c;
+  font-weight: 700; }
   .button-accent:hover {
     background: #00ff6c;
     color: #232323; }
