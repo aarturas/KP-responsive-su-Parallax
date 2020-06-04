@@ -232,7 +232,7 @@ nav {
 /*  8. tarpine     HOME  -  HERO    ( juosta su uzrasu viduje )    */
 /* =============================================================== */
 .home-hero {
-  background-image: url("../img/lapas.jpg");
+  background-image: url("../img/debesuAtspindys.jpg");
   background-size: cover;
   background-position: center;
   padding: 10em 0;
@@ -396,7 +396,7 @@ nav {
   /*    26.  HOME - ABOUT - TEXTBOX  H 1   /  ( mobiliam )  960 px ? */
   /* =============================================================== */
   .home-about {
-    background-image: url("../img/juokas.jpg");
+    background-image: url("../img/Marilyn Monroe.jpg");
     /* dabar nuotrauka atsidurs antrame plane */
     padding: 1em;
     /* padding: 5em; */
