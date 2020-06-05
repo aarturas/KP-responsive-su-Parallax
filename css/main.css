@@ -38,8 +38,8 @@ footer::after {
 /* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
 /* =============================================================== */
 /*    43. /  COLUMN SYSTEM  / Naudosime atributa []                */
-/*         visos klases, kurios bus, gaus si aprasyma              */
-/*           su LEFT surykiuosime i viena eilute                   */
+/*         visos klases, kurios bus jame, paveldes si aprasyma     */
+/*       su LEFT surykiuosime FOOTER list sarasa i viena eilute    */
 /* =============================================================== */
 [class^='col-'] {
   width: 100%;
@@ -210,8 +210,10 @@ nav a {
   nav {
     float: right; } }
 
-/* hero-home
-=================== */
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+/* =============================================================== */
+/*  8. tarpine     HOME  -  HERO    ( juosta su uzrasu viduje )    */
+/* =============================================================== */
 .home-hero {
   background-image: url(../img/debesuAtspindys.jpg);
   background-size: cover;
@@ -224,48 +226,75 @@ nav a {
     height: 100vh;
     padding-top: 35vh; } }
 
-/* hero-home
-=================== */
+/* =============================================================== */
+/*    23.  HERO - HOME  /  ( mobiliam ) langelis teksto su remeliu */
+/* =============================================================== */
 .home-about-textbox {
   background-color: #232323;
+  /* istempiame si skyriu i apacia */
   padding: 4em;
+  /* atsiranda tarpas kaireje puseje, (telefone) */
   width: 100vw;
+  /* stengiames panaikinti tarpa kaireje puseje */
   margin-left: -2.5%;
+  /* padarysime linija-remelis */
   outline: 2px solid #00ff6c;
+  /* padarysime linija-remeli aplink teksta */
   outline-offset: -2.5em;
+  /* teksta paliksime balta */
   color: #fff;
+  /* daugiau uzpildys erdves */
   position: relative; }
   .home-about-textbox h1 {
     color: #00ff6c;
     position: absolute;
+    /* bet ( left 50% ) nustumia uzrasa i desine puse */
     left: 50%;
+    /* transform grazina uzrasa i viduri */
     transform: translateX(-50%);
     top: 0.75em;
+    /* Dabar si spalva "uztusuos" remelio virsuje bgc aplink pavadinima */
     background: #232323;
     padding: 0 0.145em; }
 
+/* ============================================== */
+/*    24.  HERO - HOME  H 1   /  ( mobiliam )     */
+/* ============================================== */
 @media (min-width: 25rem) {
   h1 {
     font-size: 2rem; }
+  /* =============================================================== */
+  /*    26.  HOME - ABOUT - TEXTBOX  H 1   /  ( mobiliam )  400 px   */
+  /* =============================================================== */
   .home-about-textbox {
     padding: 5.5em; }
     .home-about-textbox h1 {
       top: 0.6em;
       padding: 0 0.325em; } }
 
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+/* =============================================================== */
+/*     17.    @ MEDIA QUERIES   /  60 rem:  ( 960 px  )            */
+/* =============================================================== */
 @media (min-width: 60rem) {
   h1 {
     font-size: 2.5rem; }
   .home-about {
     background-image: url(../img/MarilynMonroe.jpg);
+    /* dabar nuotrauka atsidurs antrame plane */
     background-repeat: no-repeat;
     padding-bottom: 10em; }
+  /* =============================================================== */
+  /*    27.  HERO - HOME  /  ( mobiliam ) langelis teksto su remeliu */
+  /* =============================================================== */
   .home-about-textbox {
     width: 50%;
     padding: 7em;
+    /* pastumia Trecios dalies uzrasa i virsu */
     outline-offset: -3.75em;
     margin-left: -2.5%;
     top: -5em;
+    /* teksta juodo langelio viduje, pastumiame i kaire */
     text-align: left;
     box-shadow: 0 0 4em 0 rgba(0, 0, 0, 0.3); }
     .home-about-textbox h1 {
@@ -273,8 +302,10 @@ nav a {
       left: 6rem;
       transform: translateX(0); } }
 
-/* portfolio
-=================== */
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+/* ================================================================== */
+/*    30.          /  PORTFOLIO  /  arba 6 nuotraukos                 */
+/* ================================================================== */
 .portfolio {
   margin: 3em 0 0; }
 
@@ -284,40 +315,61 @@ nav a {
   .port-item img {
     display: block; }
 
+/* ================================================================== */
+/*    33.  /  PORTFOLIO  /  Nuotrauku rinkinys: vidinis btn langas    */
+/* ================================================================== */
 .port-desc {
+  /* ketvirtos dalies mygtuko ir pavadinimo bgc / seselis */
   position: absolute;
   z-index: 100;
-  bottom: 0em;
-  left: 0em;
-  right: 0em;
+  bottom: 3em;
+  /* atitraukiame permatoma juoda fona is kaires puses ir desines */
+  left: 3em;
+  right: 3em;
+  /* teksto auksciau/virs mygtuko, spalva */
   color: white;
   background: rgba(0, 0, 0, 0.6);
   padding-bottom: 2em; }
   .port-desc p {
     margin: 1em; }
 
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+/* ================================================================== */
+/*    35.   /  MEDIA  37 REM  /  Sumaziname telefonui:   592 px       */
+/* ================================================================== */
 @media (min-width: 37rem) {
   .port-item {
     width: 50%;
     float: left; } }
 
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+/* ================================================================== */
+/*    37.   /  MEDIA  60 REM  /  Sumaziname telefonui:   960 px       */
+/* ================================================================== */
 @media (min-width: 60rem) {
   .port-item {
+    /* kad visos nuotraukos butu vienodu proporciju */
     width: 33.3333334%;
+    /* nuotraukas matysime "pilnas" */
     overflow: hidden; }
   .port-desc {
+    /* dabar visas uzraso fonas pasislinks zemyn */
     transform: translateY(150%); }
   .port-item:hover .port-desc {
     transform: translateY(0%); } }
 
-/* CTA
-=================== */
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+/* =============================================================== */
+/*    41.   /  Žalioji dalis  /   CTA  dalis  /                    */
+/* =============================================================== */
 .cta {
   background-color: #00ff6c;
   padding: 5em 0; }
 
-/* Footer
-=================== */
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+/* ================================================================== */
+/*    40.                 /  FOOTER  /                                */
+/* ================================================================== */
 footer {
   background: #232323;
   color: #fff;
