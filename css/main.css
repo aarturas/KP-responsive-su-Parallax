@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import 'https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap';
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700,900");
 * {
   box-sizing: border-box;
   transition: all ease-in-out 250ms; }
@@ -26,34 +26,14 @@ img {
 
 /* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
 /* ================================================================== */
-/*    40. a          /  CLEARFIX  /   AFTER   /                       */
+/*    40. a          /  CLEARFIX  /  FOOTER  :   AFTER   /            */
 /* ================================================================== */
-.clearfix::after {
+.clearfix::after,
+section::after,
+footer::after {
   content: '';
   display: block;
   clear: both; }
-
-/* ================================================================== */
-/*    40. b        /    SECTION :  AFTER   /                          */
-/* ================================================================== */
-section::after {
-  content: '';
-  display: block;
-  clear: both; }
-
-/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
-/* ================================================================== */
-/*    40.                 /  FOOTER  /                                */
-/* ================================================================== */
-footer {
-  background: #232323;
-  color: #fff;
-  text-align: left;
-  padding: 5em 0; }
-  footer::after {
-    content: '';
-    display: block;
-    clear: both; }
 
 /* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
 /* =============================================================== */
@@ -71,23 +51,34 @@ footer {
   width: 33.333334%;
   float: left; }
 
+@media (min-width: 40rem) {
+  [class^='col-'] {
+    float: left;
+    padding: 0 0.5em;
+    margin-top: 0; }
+    [class^='col-']:first-child {
+      padding-left: 0; }
+    [class^='col-']:last-child {
+      padding-right: 0; }
+  .col-3 {
+    width: 50%; }
+  .col-1 {
+    width: 16.6666%; } }
+
 /* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
 /* =============================================================== */
 /*    22.         /  Typograthy /    H 1   ( telefonui )           */
 /* =============================================================== */
 h1 {
   font-weight: 300;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin-top: 0; }
 
-/* =============================================================== */
-/*    27.     /  P  /   ir  /  P : LAST - OF - TYPE  /             */
-/* =============================================================== */
 p {
   margin-top: 0;
   line-height: 1.5;
   /* =============================================================== */
-  /*    28.     Margin'a, teksto apacioje, panaikina                 */
+  /*    27.     /  P  /   ir  /  P : LAST - OF - TYPE  /             */
   /* =============================================================== */ }
   p:last-of-type {
     margin-bottom: 0; }
@@ -105,7 +96,7 @@ p {
     display: block;
     font-size: 0.9em; }
 
-/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
 /* =============================================================== */
 /*    41.   /  Žalioji dalis  /   CTA  dalis  /                    */
 /* =============================================================== */
@@ -114,14 +105,21 @@ p {
 
 /* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
 /* =============================================================== */
-/*    42.               /  FOOTER  /                               */
+/*    42.               /  FOOTER  /   Unstyled list  /            */
 /* =============================================================== */
 .unstyled-list {
   margin: 0;
   padding: 0;
   list-style-type: none; }
 
-/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+@media (min-width: 60rem) {
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6; }
+  .title {
+    font-size: 3.7rem; } }
+
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
 /* =============================================================== */
 /*    14.    BUTTON  /  Virsutineje dalyje, po NAV menu linku      */
 /* =============================================================== */
@@ -134,26 +132,24 @@ p {
   border-style: solid;
   padding: 0.5em 1.75em; }
 
+@media (min-width: 60rem) {
+  .button {
+    font-size: 1.5rem; } }
+
 /* =============================================================== */
-/*    30.  /   P   /    60 REM  /  mažesni mygtukai / sekcija 4:   */
+/*    30.    /   mažesni mygtukai   /    sekcija 4:                */
 /* =============================================================== */
 .button-small {
   font-size: 0.7rem;
   font-weight: 700; }
 
 /* =============================================================== */
-/*    15.    BUTTON  -  ACCENT / mygtuko apipavidalinimas          */
+/*    15.    BUTTON  -  ACCENT / img viduje mygtukai su tekstu     */
 /* =============================================================== */
 .button-accent {
   color: #00ff6c;
-  border-color: #00ff6c;
-  /* =============================================================== */
-  /*    16.    BUTTON  -  ACCENT : HOVER / FOCUS                     */
-  /* =============================================================== */ }
-  .button-accent:hover {
-    background: #00ff6c;
-    color: #232323; }
-  .button-accent:focus {
+  border-color: #00ff6c; }
+  .button-accent:hover, .button-accent:focus {
     background: #00ff6c;
     color: #232323; }
 
@@ -162,24 +158,16 @@ p {
 /* =============================================================== */
 .button-dark {
   color: #232323;
-  border-color: #232323;
-  /* =============================================================== */
-  /*    32.    BUTTON  -  DARK : HOVER / FOCUS  / Zalioji dalis      */
-  /* =============================================================== */
-  /* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
-  /* =============================================================== */
-  /*    ?.                 /   PARALLAX  /                           */
-  /* =============================================================== */ }
-  .button-dark:hover {
-    background: #232323;
-    color: #00ff6c; }
-  .button-dark:focus {
+  border-color: #232323; }
+  .button-dark:hover, .button-dark:focus {
     background: #232323;
     color: #00ff6c; }
 
-.parallax--bg {
-  transition: initial; }
-
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+/* =============================================================== */
+/*    ?.                 /   PARALLAX  /                           */
+/* =============================================================== */
+.parallax--bg,
 .parallax--box {
   transition: initial; }
 
@@ -189,281 +177,149 @@ p {
 /* =============================================================== */
 header {
   position: absolute;
-  margin: 1em;
   left: 0;
-  right: 0; }
+  right: 0;
+  margin: 1em; }
 
-/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
 /* =============================================================== */
 /*     .                       NAV                                 */
 /* =============================================================== */
-nav {
-  /* =============================================================== */
-  /*       6.                   NAV LI                               */
-  /* =============================================================== */
-  /* =============================================================== */
-  /*       7.                   NAV  A  ( linkai  )                  */
-  /* =============================================================== */ }
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-  nav li {
-    display: inline-block;
-    margin: 1em; }
-  nav a {
-    font-weight: 900;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    padding: 0.5em;
-    background: #016e2d;
-    color: #fff;
-    /* =============================================================== */
-    /*  9.            NAV A : HOVER ir  NAV A : FOCUS                  */
-    /* =============================================================== */ }
-    nav a:hover {
-      color: #c1dac4; }
-    nav a:focus {
-      color: #c1dac4; }
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
 
-/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
-/* =============================================================== */
-/*  8. tarpine     HOME  -  HERO    ( juosta su uzrasu viduje )    */
-/* =============================================================== */
+nav li {
+  display: inline-block;
+  margin: 1em; }
+
+nav a {
+  font-weight: 900;
+  text-decoration: none;
+  padding: 0.5em;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.8rem; }
+  nav a:hover, nav a:focus {
+    color: #ddd; }
+
+@media (min-width: 60rem) {
+  .logo {
+    float: left; }
+  nav {
+    float: right; } }
+
+/* hero-home
+=================== */
 .home-hero {
-  background-image: url("../img/debesuAtspindys.jpg");
+  background-image: url(../img/debesuAtspindys.jpg);
   background-size: cover;
   background-position: center;
   padding: 10em 0;
-  color: #fff;
-  /* overflow: hidden; */
-  /* PRIDESIME SUSTABDYTA IMG, nes idesime PARALAKSA */
-  /* fixed, tai pirma bgc bus nejudanti */
-  /* background-attachment: fixed; */ }
+  color: #fff; }
 
-/* =============================================================== */
-/*    23.  HERO - HOME  /  ( mobiliam ) langelis teksto su remeliu */
-/* =============================================================== */
+@media (min-width: 60rem) {
+  .home-hero {
+    height: 100vh;
+    padding-top: 35vh; } }
+
+/* hero-home
+=================== */
 .home-about-textbox {
   background-color: #232323;
-  /* teksta paliksime balta */
-  color: #fff;
-  /* istempiame si skyriu i apacia */
   padding: 4em;
-  /* atsiranda tarpas kaireje puseje, (telefone) */
-  /* width: 100vh; */
-  width: 106%;
-  /* stengiames panaikinti tarpa kaireje puseje */
-  /* margin-left: -2.5%; */
-  margin-left: -2.5vw;
-  /* padarysime linija-remelis */
+  width: 100vw;
+  margin-left: -2.5%;
   outline: 2px solid #00ff6c;
-  /* padarysime linija-remeli aplink teksta */
   outline-offset: -2.5em;
-  /* daugiau uzpildys erdves */
-  position: relative;
-  /* =============================================================== */
-  /*    24.  HERO - HOME  H 1   /  ( mobiliam )                      */
-  /* =============================================================== */ }
+  color: #fff;
+  position: relative; }
   .home-about-textbox h1 {
     color: #00ff6c;
     position: absolute;
-    top: 0.75em;
-    /* Dabar si spalva "uztusuos" remelio virsuje bgc aplink pavadinima */
-    background: #232323;
-    /* bet ( left 50% ) nustumia uzrasa i desine puse */
     left: 50%;
-    padding: 0 0.25em;
-    /* transform grazina uzrasa i viduri */
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    top: 0.75em;
+    background: #232323;
+    padding: 0 0.145em; }
 
-/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
-/* ================================================================== */
-/*    30.               /  PORTFOLIO  /                               */
-/* ================================================================== */
+@media (min-width: 25rem) {
+  h1 {
+    font-size: 2rem; }
+  .home-about-textbox {
+    padding: 5.5em; }
+    .home-about-textbox h1 {
+      top: 0.6em;
+      padding: 0 0.325em; } }
+
+@media (min-width: 60rem) {
+  h1 {
+    font-size: 2.5rem; }
+  .home-about {
+    background-image: url(../img/MarilynMonroe.jpg);
+    background-repeat: no-repeat;
+    padding-bottom: 10em; }
+  .home-about-textbox {
+    width: 50%;
+    padding: 7em;
+    outline-offset: -3.75em;
+    margin-left: -2.5%;
+    top: -5em;
+    text-align: left;
+    box-shadow: 0 0 4em 0 rgba(0, 0, 0, 0.3); }
+    .home-about-textbox h1 {
+      top: 0.75em;
+      left: 6rem;
+      transform: translateX(0); } }
+
+/* portfolio
+=================== */
 .portfolio {
   margin: 3em 0 0; }
 
-/* ================================================================== */
-/*    31.               /  PORTFOLIO  /                               */
-/* ================================================================== */
 .port-item {
   margin: 0;
   position: relative; }
   .port-item img {
     display: block; }
 
-/* ================================================================== */
-/*    33.  /  PORTFOLIO  /  Nuotrauku rinkinys: vidinis btn langas    */
-/* ================================================================== */
 .port-desc {
-  /* ketvirtos dalies mygtuko ir pavadinimo bgc / seselis */
   position: absolute;
   z-index: 100;
-  bottom: 3em;
-  /* bottom: 0em; */
-  /* left: 0em; */
-  /* atitraukiame permatoma juoda fona is kaires puses ir desines */
-  left: 3em;
-  /* right: 0em; */
-  right: 3em;
-  /* teksto auksciau/virs mygtuko, spalva */
+  bottom: 0em;
+  left: 0em;
+  right: 0em;
   color: white;
-  background: rgba(0, 0, 0, 0.5);
-  /* padding: 1em; */
-  padding-bottom: 2em;
-  /* ================================================================== */
-  /*    34.        /  PORTFOLIO  /   PORT DESC  /  P  /                 */
-  /* ================================================================== */ }
+  background: rgba(0, 0, 0, 0.6);
+  padding-bottom: 2em; }
   .port-desc p {
     margin: 1em; }
 
-/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
-/* ================================================================== */
-/*    39.      /  CTA  /   Zalioji dalis                              */
-/* ================================================================== */
+@media (min-width: 37rem) {
+  .port-item {
+    width: 50%;
+    float: left; } }
+
+@media (min-width: 60rem) {
+  .port-item {
+    width: 33.3333334%;
+    overflow: hidden; }
+  .port-desc {
+    transform: translateY(150%); }
+  .port-item:hover .port-desc {
+    transform: translateY(0%); } }
+
+/* CTA
+=================== */
 .cta {
   background-color: #00ff6c;
   padding: 5em 0; }
 
-/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
-/* =============================================================== */
-/*    44.  /  COL - 3  / Paskirsime tekstui 50 procentu  GRID      */
-/* =============================================================== */
-@media (min-width: 40rem) {
-  [class^='col-'] {
-    float: left;
-    padding: 0 0.5em;
-    margin-top: 0;
-    /* =============================================================== */
-    /*    46.  /  COL - 3  /  Paskirsime tekstui 50 procentu           */
-    /*    kadangi bus CUDO klase, tai po [] rasysime vienguba dvitaski */
-    /* =============================================================== */
-    /* =============================================================== */
-    /*    47.  /  COL - 3  /  Paskirsime tekstui 50 procentu           */
-    /* =============================================================== */ }
-    [class^='col-']:first-child {
-      padding-left: 0; }
-    [class^='col-']:last-child {
-      padding-right: 0; }
-  /* =============================================================== */
-  /*    47.  /  COL - 3  /  Paskirsime tekstui 50 procentu           */
-  /* =============================================================== */
-  .col-3 {
-    width: 50%; }
-  /* =============================================================== */
-  /*    45.  /  COL - 3  / Kadangi yra GRID, padalinsime likusia     */
-  /*          erdve po lygias dalis                                  */
-  /* =============================================================== */
-  .col-1 {
-    width: 16.6666%; } }
-
-/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
-/* =============================================================== */
-/*     17.    @ MEDIA QUERIES   /  kazkur ( 888 px  )              */
-/* =============================================================== */
-@media (min-width: 60rem) {
-  /* =============================================================== */
-  /*    29.               /   P   /    60 REM                        */
-  /* =============================================================== */
-  p {
-    font-size: 1.2rem;
-    line-height: 1.6; }
-  .title {
-    font-size: 3.5rem; }
-  .button {
-    font-size: 1.5rem; }
-  /* padarysime, kad didinant ekrana, LOGO atsidurtu kaireje puseje */
-  .logo {
-    float: left; }
-  /*  o, NAV menu linkai : desineje puseje */
-  nav {
-    float: right; }
-  /* =============================================================== */
-  /*    19.  HERO - HOME  /  ( mobiliam ) langelis teksto su remeliu */
-  /* =============================================================== */
-  .home-hero {
-    height: 100vh;
-    /* paslenkame uzrasa i viduri */
-    padding-top: 35vh; }
-  /* =============================================================== */
-  /*    25.    H 1   /  ( mobiliam ) /   60 REM  / apie 1000 px      */
-  /* =============================================================== */
-  h1 {
-    font-size: 2.5rem; }
-  /* =============================================================== */
-  /*    26.  HOME - ABOUT - TEXTBOX  H 1   /  ( mobiliam )  960 px ? */
-  /* =============================================================== */
-  .home-about {
-    background-image: url("../img/Marilyn Monroe.jpg");
-    /* dabar nuotrauka atsidurs antrame plane */
-    padding: 1em;
-    /* padding: 5em; */
-    background-repeat: no-repeat;
-    padding-bottom: 10em; }
-  /* =============================================================== */
-  /*    27.  HERO - HOME  /  ( mobiliam ) langelis teksto su remeliu */
-  /* =============================================================== */
-  .home-about-textbox {
-    width: 60%;
-    margin-left: -2.5%;
-    padding: 7em;
-    top: -5em;
-    /* teksta juodo langelio viduje, pastumiame i kaire */
-    text-align: left;
-    box-shadow: 0 0 4em 0 rgba(0, 0, 0, 0.3);
-    /* pastumia Trecios dalies uzrasa i virsu */
-    /* outline-offset: -3.75em; */
-    /* =============================================================== */
-    /*    26.  HOME - ABOUT - TEXTBOX  H 1   /  ( mobiliam )           */
-    /* =============================================================== */ }
-    .home-about-textbox h1 {
-      top: 0.3rem;
-      /* padding: 0.2em; */
-      left: 3em;
-      transform: translateX(0); }
-  /* ================================================================= */
-  /*    36.               /  PORTFOLIO  /   MEDIA  60 REM              */
-  /* ================================================================= */
-  .port-item {
-    /* kad visos nuotraukos butu vienodu proporciju */
-    width: 33.3333334%;
-    /* nuotraukas matysime "pilnas" */
-    overflow: hidden; }
-    .port-item:hover {
-      /* ================================================================== */
-      /*    37.  /  PORTFOLIO  /  Nustatysime judejima zemyn su ( Y )       */
-      /* ================================================================== */ }
-      .port-item:hover .port-desc {
-        /* grazins fona vel atgal, kada su "pele" "uzlipsime" ant nuotraukos */
-        transform: translateY(0%); }
-  .port-desc {
-    /* dabar visas uzraso fonas pasislinks zemyn */
-    transform: translateY(150%); } }
-
-/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
-/* =============================================================== */
-/*    25.    H 1   /  ( mobiliam )     /  25 REM  /   960 px ?     */
-/* =============================================================== */
-@media (min-width: 25rem) {
-  h1 {
-    font-size: 2rem; }
-  /* =============================================================== */
-  /*    26.  HOME - ABOUT - TEXTBOX  H 1   /  ( mobiliam )  960 px ? */
-  /* =============================================================== */
-  .home-about-textbox {
-    padding: 5.5em; }
-    .home-about-textbox h1 {
-      top: 1.1rem;
-      padding: 0 0.325em; } }
-
-/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
-/* ================================================================== */
-/*    35.   /  MEDIA  37 REM  /  Sumaziname telefonui:                */
-/* ================================================================== */
-@media (min-width: 37rem) {
-  .port-item {
-    width: 50%;
-    /* padarys, kad nuotraukos issidestytu viena salia kitos didinant */
-    float: left; } }
+/* Footer
+=================== */
+footer {
+  background: #232323;
+  color: #fff;
+  text-align: left;
+  padding: 5em 0; }
